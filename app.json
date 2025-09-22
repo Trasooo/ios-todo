@@ -3,13 +3,14 @@
   "name": "TodoList By Traso",
     "slug": "ios-todo",
     "scheme": "iostodo",
-    "version": "1.0.0",
+  "version": "1.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "icon": "./assets/icon.png",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.traso.iostodo"
+      "bundleIdentifier": "com.traso.todolistbytraso",
+      "buildNumber": "2"
     },
     "assetBundlePatterns": [
       "**/*"
