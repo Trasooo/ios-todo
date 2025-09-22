@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Expo/EAS
+.expo/
+.expo-shared/
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store

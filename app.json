@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "iOS Todo",
+    "slug": "ios-todo",
+    "scheme": "iostodo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.iostodo"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": []
+  }
+}
