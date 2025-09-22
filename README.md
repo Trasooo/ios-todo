@@ -52,6 +52,7 @@ Note:
 - Per distribuzione interna veloce: `--profile preview`.
 
 ## Alternativa senza certificato a pagamento: Sideloadly
+(workflow pronto: https://github.com/Trasooo/ios-todo/actions)
 Se non hai l'Apple Developer a pagamento, puoi installare l'app con Sideloadly usando il tuo Apple ID gratuito (validità 7 giorni).
 
 Percorso consigliato:
