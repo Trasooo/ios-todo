@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Promemoria Emoji",
+  "name": "TodoList By Traso",
     "slug": "ios-todo",
     "scheme": "iostodo",
     "version": "1.0.0",
