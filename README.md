@@ -4,7 +4,7 @@ Una semplice app To‑Do creata con Expo/React Native. Supporta:
 - Aggiunta, toggle, e rimozione task
 - Persistenza locale con AsyncStorage
 - Build IPA via EAS Build
-- Emoji per ogni promemoria (tieni premuta l'emoji per cambiarla)
+- Emoji per ogni promemoria (tocca l'emoji per cambiarla)
 - Modale crediti
 
 ## Requisiti
