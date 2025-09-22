@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const out = path.resolve(__dirname, '..', 'assets', 'icon.png');
+const outDir = path.dirname(out);
+fs.mkdirSync(outDir, { recursive: true });
 
 // Base64 PNG (512x512) created beforehand to avoid external tooling.
 // It's a simple flat blue square with a white note emoji-like glyph.
