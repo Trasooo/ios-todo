@@ -1,9 +1,11 @@
-# iOS Todo (Expo)
+# Promemoria Emoji (Expo)
 
 Una semplice app To‑Do creata con Expo/React Native. Supporta:
 - Aggiunta, toggle, e rimozione task
 - Persistenza locale con AsyncStorage
 - Build IPA via EAS Build
+- Emoji per ogni promemoria (tieni premuta l'emoji per cambiarla)
+- Modale crediti
 
 ## Requisiti
 - Node.js LTS installato
@@ -29,6 +31,10 @@ Aggiorna il bundle identifier in `app.json` con il tuo dominio rovesciato:
   "expo": { "ios": { "bundleIdentifier": "com.tuo.domini.o.iostodo" } }
 }
 ```
+
+Per cambiare nome app o icona:
+- Nome visibile: `expo.name` in `app.json` (es. "Promemoria Emoji")
+- Icona: sostituisci `assets/icon.png` (512x512). Puoi rigenerarla con `node scripts/generate-icon.js`
 
 ## Build IPA con EAS
 EAS Build compila sul cloud (funziona anche su Windows).

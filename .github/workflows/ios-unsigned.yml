@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
+      - name: Generate icon
+        run: |
+          node scripts/generate-icon.js
       - name: Expo prebuild (iOS)
         env:
           EXPO_NO_INTERACTIVE: '1'

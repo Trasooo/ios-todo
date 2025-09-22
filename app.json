@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "iOS Todo",
+    "name": "Promemoria Emoji",
     "slug": "ios-todo",
     "scheme": "iostodo",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.traso.iostodo"
