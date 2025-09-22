@@ -46,16 +46,21 @@ jobs:
       - name: Discover workspace and scheme
         id: discover
         shell: bash
-        working-directory: ios
         run: |
           set -euo pipefail
-          WORKSPACE=$(ls *.xcworkspace | head -n1)
+          # Expo prebuild creates ios/iOSTodo.xcworkspace and a matching scheme iOSTodo
+          WORKSPACE="ios/iOSTodo.xcworkspace"
+          SCHEME="iOSTodo"
+          echo "Detected workspace: $WORKSPACE"
+          echo "Detected scheme: $SCHEME"
+          if [ ! -f "$WORKSPACE/contents.xcworkspacedata" ]; then
+            echo "Workspace not found at $WORKSPACE" >&2
+            ls -la ios || true
+            exit 1
+          fi
           echo "workspace=$WORKSPACE" >> $GITHUB_OUTPUT
-          SCHEME=$(xcodebuild -workspace "$WORKSPACE" -list -json | /usr/bin/python3 -c "import sys,json; d=json.load(sys.stdin); w=d.get('workspace') or {}; s=w.get('schemes') or []; print(s[0] if s else '')")
-          if [ -z "$SCHEME" ]; then echo 'No scheme found' && exit 1; fi
           echo "scheme=$SCHEME" >> $GITHUB_OUTPUT
       - name: Build unsigned .app
-        working-directory: ios
         run: |
           xcodebuild \
             -workspace "${{ steps.discover.outputs.workspace }}" \
@@ -64,7 +69,7 @@ jobs:
             -sdk iphoneos \
             -arch arm64 \
             CODE_SIGNING_ALLOWED=NO \
-            -derivedDataPath ../build
+            -derivedDataPath build
       - name: Package unsigned IPA
         shell: bash
         run: |
